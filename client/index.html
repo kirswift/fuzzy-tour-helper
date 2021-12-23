@@ -16,11 +16,29 @@
         <h2>🌴 Fuzzy Tour Helper</h2>
         <p class="version"><span class="badge badge-pill badge-primary">v1.0</span></p>
         
-        <p>Средняя температура:
-              
+        <p>Климат:
+          <input type="radio" v-model="temp" value='Холодно'>
+          <label class="sea-label">Холодно</label>
+          <input type="radio" v-model="temp" value='Прохладно'>
+          <label class="sea-label">Прохладно</label>
+          <input type="radio" v-model="temp" value='Тепло'>
+          <label class="sea-label">Тепло</label>
+          <input type="radio" v-model="temp" value='Жарко'>
+          <label class="sea-label">Жарко</label>
+          <input type="radio" v-model="temp" value='Очень жарко'>
+          <label class="sea-label">Очень жарко</label>
         </p>
-        <p>Стоимость путевки:
-
+        <p>Цена:
+          <input type="radio" v-model="price" value='Очень дешево'>
+          <label class="sea-label">Очень дешево</label>
+          <input type="radio" v-model="price" value='Дешево'>
+          <label class="sea-label">Дешево</label>
+          <input type="radio" v-model="price" value='Средне'>
+          <label class="sea-label">Средне</label>
+          <input type="radio" v-model="price" value='Дорого'>
+          <label class="sea-label">Дорого</label>
+          <input type="radio" v-model="price" value='Очень дорого'>
+          <label class="sea-label">Очень дорого</label>
         </p>
         <p>Наличие моря:
             <input type="radio" v-model="sea" value=1>

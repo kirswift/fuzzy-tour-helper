@@ -2,6 +2,8 @@ const app = new Vue({
     el: '#app',
     data: {
         sea: 1,
+        temp: 'Холодно',
+        price: 'Очень дешево',
         countries: null,
     },
     methods: {
@@ -12,10 +14,8 @@ const app = new Vue({
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    minTemp: this.minTemp,
-                    maxTemp: this.maxTemp,
-                    minPrice: this.minPrice,
-                    maxPrice: this.maxPrice,
+                    temp: this.temp,
+                    price: this.price,
                     sea: this.sea
                 })
             });
