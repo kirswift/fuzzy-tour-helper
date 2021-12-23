@@ -1,0 +1,212 @@
+{
+  "Египет": {
+    "sea": true,
+    "temp": 29,
+    "price": 35000,
+    "en": "egypt",
+    "code": "eg"
+  },
+  "Турция": {
+    "sea": true,
+    "temp": 27,
+    "price": 37000,
+    "en": "turkey",
+    "code": "tr"
+  },
+  "Таиланд": {
+    "sea": true,
+    "temp": 27,
+    "price": 45000,
+    "en": "tailand",
+    "code": "th"
+  },
+  "Вьетнам": {
+    "sea": true,
+    "temp": 26,
+    "price": 47000,
+    "en": "vietnam",
+    "code": "vn"
+  },
+  "Тунис": {
+    "sea": true,
+    "temp": 22,
+    "price": 35000,
+    "en": "tunis",
+    "code": "tn"
+  },
+  "Австрия": {
+    "sea": false,
+    "temp": 11,
+    "price": 38000,
+    "en": "austria",
+    "code": "at"
+  },
+  "Греция": {
+    "sea": true,
+    "temp": 21,
+    "price": 37000,
+    "en": "greece",
+    "code": "gr"
+  },
+  "Абхазия": {
+    "sea": true,
+    "temp": 23,
+    "price": 37000,
+    "en": "abkhazia",
+    "code": "ge"
+  },
+  "ЮАР": {
+    "sea": true,
+    "temp": 15,
+    "price": 37000,
+    "en": "yuar",
+    "code": "za"
+  },
+  "Финляндия": {
+    "sea": false,
+    "temp": 17,
+    "price": 75000,
+    "en": "finland",
+    "code": "fi"
+  },
+  "Доминикана": {
+    "sea": true,
+    "temp": 30,
+    "price": 100000,
+    "en": "dominicana",
+    "code": "do"
+  },
+  "Израиль": {
+    "sea": true,
+    "temp": 20,
+    "price": 61000,
+    "en": "israel",
+    "code": "il"
+  },
+  "Индия": {
+    "sea": true,
+    "temp": 30,
+    "price": 61000,
+    "en": "india",
+    "code": "in"
+  },
+  "Нидерланды": {
+    "sea": true,
+    "temp": 15,
+    "price": 61000,
+    "en": "niderlandes",
+    "code": "nl"
+  },
+  "Испания": {
+    "sea": true,
+    "temp": 30,
+    "price": 40000,
+    "en": "spain",
+    "code": "es"
+  },
+  "Италия": {
+    "sea": true,
+    "temp": 22,
+    "price": 35000,
+    "en": "italy",
+    "code": "it"
+  },
+  "Япония": {
+    "sea": true,
+    "temp": 25,
+    "price": 71000,
+    "en": "japan",
+    "code": "jp"
+  },
+  "ОАЭ": {
+    "sea": true,
+    "temp": 30,
+    "price": 35000,
+    "en": "oae",
+    "code": "ae"
+  },
+  "Чехия": {
+    "sea": false,
+    "temp": 16,
+    "price": 34000,
+    "en": "chehia",
+    "code": "cz"
+  },
+  "Куба": {
+    "sea": true,
+    "temp": 22,
+    "price": 109000,
+    "en": "cuba",
+    "code": "cu"
+  },
+  "Мексика": {
+    "sea": true,
+    "temp": 24,
+    "price": 103000,
+    "en": "mexico",
+    "code": "mx"
+  },
+  "Хорватия": {
+    "sea": true,
+    "temp": 21,
+    "price": 54000,
+    "en": "croatia",
+    "code": "hr"
+  },
+  "Франция": {
+    "sea": true,
+    "temp": 21,
+    "price": 52000,
+    "en": "france",
+    "code": "fr"
+  },
+  "Люксембург": {
+    "sea": false,
+    "temp": 18,
+    "price": 36000,
+    "en": "luxembourg",
+    "code": "lu"
+  },
+  "Черногория": {
+    "sea": true,
+    "temp": 23,
+    "price": 45000,
+    "en": "montenegro",
+    "code": "me"
+  },
+  "Мальдивы": {
+    "sea": true,
+    "temp": 30,
+    "price": 75000,
+    "en": "maldives",
+    "code": "mv"
+  },
+  "Ирландия": {
+    "sea": true,
+    "temp": 19,
+    "price": 122000,
+    "en": "Ireland",
+    "code": "ie"
+  },
+  "Кипр": {
+    "sea": true,
+    "temp": 30,
+    "price": 51000,
+    "en": "cyprus",
+    "code": "cy"
+  },
+  "Сейшелы": {
+    "sea": true,
+    "temp": 28,
+    "price": 102000,
+    "en": "seychelles",
+    "code": "sc"
+  },
+  "Армения": {
+    "sea": false,
+    "temp": 27,
+    "price": 26000,
+    "en": "armenia",
+    "code": "am"
+  }
+}

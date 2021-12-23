@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/slider.css" />
+    <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous"
+  />
+  </head>
+  <body>
+    <div class="container" id="app">
+      <div class ="main-block">
+        <h2>🌴 Tour Helper</h2>
+        <p class="version"><span class="badge badge-pill badge-primary">v1.0</span></p>
+        
+        <p>Средняя температура:
+            <div class="range-slider">
+                <span class="slider-label-left">+10°C</span>
+                <input @change="temperatureSlider" v-model.number="minTemp" min="10" max="40" step="5" type="range" />
+                <input @change="temperatureSlider" v-model.number="maxTemp" min="10" max="40" step="5" type="range" />
+                <span class="slider-label-right">+40°C</span>
+              </div>
+              
+        </p>
+        <p>Стоимость путевки:
+            <div class="range-slider">
+                <span class="slider-label-left">25000₽</span>
+                <input @change="priceSlider" v-model.number="minPrice" min="25000" max="125000" step="5000" type="range" />
+                <input @change="priceSlider" v-model.number="maxPrice" min="25000" max="125000" step="5000" type="range" />
+                <span class="slider-label-right">125000₽</span>
+              </div>
+        </p>
+        <p>Наличие моря:
+            <input type="radio" v-model="sea" value=1>
+            <label class="sea-label">Есть</label>
+            <input type="radio" v-model="sea" value=0>
+            <label class="sea-label">Нет</label>
+        </p>
+        <button type="button" class="btn btn-success" @click="findCountries()">Подобрать предложения</button>
+        <h4 v-if="countries != null">Результаты:</h4>
+        <div class="row">
+            <div v-for="current in countries" class="col-sm-4">
+              <div class="card country-block">
+                <div class="card-body">
+                  <h5 class="card-title"><img :src="getFlagImageSource(current.code)"><br>{{ current.name }}</h5>
+                  <p class="card-text">Температура: <b>±{{ current.temp }}°C</b> <br>
+                      Цена путевки: <b>{{ current.price }}₽</b> <br>
+                      Море: <b>{{ current.sea ? 'есть' : 'нет'}}</b>
+                  </p>
+                  <a :href="getTourLink(current.en)" class="btn btn-primary">Путевки</a>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      </div>
+      <div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
