@@ -15,22 +15,36 @@ class FuzzySet {
     }
 
     getName() {
-        return name;
+        return this.name;
     }
 }
 
 const fuzzyTemperatures = [
-    new FuzzySet('Холодно', 5, 10, 15),
-    new FuzzySet('Прохладно', 10, 15, 20),
-    new FuzzySet('Тепло', 15, 20, 25),
-    new FuzzySet('Жарко', 20, 25, 30),
-    new FuzzySet('Очень жарко', 25, 30, 35),
+    new FuzzySet('Холодно', 9, 10, 18),
+    new FuzzySet('Прохладно', 10, 18, 22),
+    new FuzzySet('Тепло', 18, 22, 27),
+    new FuzzySet('Жарко', 22, 27, 30),
+    new FuzzySet('Очень жарко', 27, 34, 35),
 ]
 
 const fuzzyPrices = [
-    new FuzzySet('Очень дешево', 20, 25, 60),
-    new FuzzySet('Дешево', 40, 50, 80),
-    new FuzzySet('Средне', 60, 80, 100),
-    new FuzzySet('Дорого', 80, 100, 120),
-    new FuzzySet('Очень дорого', 100, 120, 140),
+    new FuzzySet('Очень дешево', 20000, 25000, 60000),
+    new FuzzySet('Дешево', 40000, 50000, 80000),
+    new FuzzySet('Средне', 60000, 80000, 100000),
+    new FuzzySet('Дорого', 80000, 100000, 120000),
+    new FuzzySet('Очень дорого', 100000, 135000, 140000),
 ]
+
+
+module.exports = {
+    fuzzify(countries, temp, price, sea) {
+        let tempSet = fuzzyTemperatures.find(x => x.getName() === temp);
+        let priceSet = fuzzyPrices.find(x => x.getName() === price);
+        return countries.map(x => {
+            let tempValue = tempSet.getValue(x.temp);
+            let priceValue = priceSet.getValue(x.price);
+            return {...x, value: tempValue + priceValue};
+        }).filter(y => y.sea === Boolean(parseInt(sea)));
+    }
+}
+

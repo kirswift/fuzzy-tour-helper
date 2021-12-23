@@ -21,8 +21,7 @@ const app = new Vue({
             });
 
             response.json().then(data => {
-                console.log(data);
-                this.countries = data;
+                this.countries = data.filter((el, idx) => idx < 6);
             });
         },
         getFlagImageSource(code) {

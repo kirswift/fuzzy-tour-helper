@@ -17,6 +17,6 @@ app.get('/', (req, res) => {
 
 app.post('/find', (req, res) => {
     let body = req.body;
-    let result = finder.findCountries(body.minTemp, body.maxTemp, body.minPrice, body.maxPrice, body.sea);
+    let result = finder.findCountries(body.temp, body.price, body.sea);
     res.send(result);
 });

@@ -47,7 +47,7 @@
             <label class="sea-label">Нет</label>
         </p>
         <button type="button" class="btn btn-success" @click="findCountries()">Подобрать предложения</button>
-        <h4 v-if="countries != null">Результаты:</h4>
+        <h4 v-if="countries != null">Подходящие страны:</h4>
         <div class="row">
             <div v-for="current in countries" class="col-sm-4">
               <div class="card country-block">

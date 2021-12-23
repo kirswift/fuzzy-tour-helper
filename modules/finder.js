@@ -1,4 +1,5 @@
 const data = require('../data/countries.json');
+const fuzzy = require('./fuzzy')
 
 let countries = [];
 
@@ -21,12 +22,9 @@ module.exports = {
     getCountries() {
         return countries;
     },
-    findCountries(minTemp, maxTemp, minPrice, maxPrice, sea) {
-        return countries.filter(x =>
-            x.temp >= minTemp &&
-            x.temp <= maxTemp &&
-            x.price >= minPrice &&
-            x.price <= maxPrice &&
-            x.sea == sea);
+    findCountries(temp, price, sea) {
+        let res = fuzzy.fuzzify(countries, temp, price, sea);
+        res.sort((a, b) => b.value - a.value);
+        return res;
     }
 }
