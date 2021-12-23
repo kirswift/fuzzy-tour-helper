@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/slider.css" />
     <link
     rel="stylesheet"
     href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -14,25 +13,14 @@
   <body>
     <div class="container" id="app">
       <div class ="main-block">
-        <h2>🌴 Tour Helper</h2>
+        <h2>🌴 Fuzzy Tour Helper</h2>
         <p class="version"><span class="badge badge-pill badge-primary">v1.0</span></p>
         
         <p>Средняя температура:
-            <div class="range-slider">
-                <span class="slider-label-left">+10°C</span>
-                <input @change="temperatureSlider" v-model.number="minTemp" min="10" max="40" step="5" type="range" />
-                <input @change="temperatureSlider" v-model.number="maxTemp" min="10" max="40" step="5" type="range" />
-                <span class="slider-label-right">+40°C</span>
-              </div>
               
         </p>
         <p>Стоимость путевки:
-            <div class="range-slider">
-                <span class="slider-label-left">25000₽</span>
-                <input @change="priceSlider" v-model.number="minPrice" min="25000" max="125000" step="5000" type="range" />
-                <input @change="priceSlider" v-model.number="maxPrice" min="25000" max="125000" step="5000" type="range" />
-                <span class="slider-label-right">125000₽</span>
-              </div>
+
         </p>
         <p>Наличие моря:
             <input type="radio" v-model="sea" value=1>

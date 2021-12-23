@@ -1,28 +1,10 @@
 const app = new Vue({
     el: '#app',
     data: {
-        minTemp: 15,
-        maxTemp: 25,
-        minPrice: 30000,
-        maxPrice: 70000,
         sea: 1,
         countries: null,
     },
     methods: {
-        temperatureSlider() {
-            if (this.minTemp > this.maxTemp) {
-                let tmp = this.maxTemp;
-                this.maxTemp = this.minTemp;
-                this.minTemp = tmp;
-            }
-        },
-        priceSlider() {
-            if (this.minPrice > this.maxPrice) {
-                let tmp = this.maxPrice;
-                this.maxPrice = this.minPrice;
-                this.minPrice = tmp;
-            }
-        },
         async findCountries() {
             let response = await fetch('find', {
                 method: 'POST',
